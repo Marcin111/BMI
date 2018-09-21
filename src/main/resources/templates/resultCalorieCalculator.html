@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--dwa linki z bootstrapa i z fontawesome z cdn-->
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link th:href="@{/styles.css}" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <div class="row">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/bmi">Kalkulator BMI<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/calorieCalculator">Kalkulator Kalorii<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--<label> Płeć; </label>-->
+<!--<h1 th:text="${dataCalorieCalculator.sex}"/>-->
+
+<!--<label>Podana waga: </label>-->
+
+<!--<h1 th:text="${getWeight()}"/>-->
+
+<!--<label> Podany wzrost: </label>-->
+<!--<h1 th:text="${dataCalorieCalculator.height}"/>-->
+<div class="result">
+<div class="container">
+    <div class="row">
+        <h1>
+            <label>Dobowe zapotrzebowanie kaloryczne:</label>
+            <p th:text="${dataCalorieCalculator}"></p>
+        </h1>
+        <!--<label> g </label>-->
+        <!--<h1 th:text="${DataCalorieCalculator.getBMR()}"/>-->
+
+        <!--dwa linki żeby po zmniejszeniu działało meny-->
+    </div>
+</div>
+</div>
+
+<div class="container">
+
+    <div class="flex">
+
+        <div class="flex-child">
+            <p class="font-weight-bold">Basal Metabolic Rate:</p>
+            czyli wskaźnik podstawowej przemiany materii (polski skrót PPM), nazywany również tempem metabolizmu
+            podstawowego, wskazuje najmniejsze dzienne zapotrzebowanie kaloryczne, dzięki któremu zachowamy podstawowe
+            funkcje życiowe. Na układ nerwowy przypada 1/4 tej wartości, na wątrobę - 1/5, 1/15 na serce i nerki, a
+            kolejne 2/5 na pozostałe organy.
+        </div>
+
+        <div class="flex-child">
+            <p class="font-weight-bold">Stopnie aktywności i ich współczynniki</p>
+            <div class="bd-example">
+                <ul>
+                    <li>1,2 brak aktywności, praca siedząca</li>
+                    <li>1,3-1,4 niska aktywność (praca siedząca i 1-2 treningi w tygodniu)</li>
+                    <li>1,5-1,6 średnia aktywność (praca siedząca i treningi 3-4 razy w tygodniu)</li>
+                    <li>1,7-1,8 wysoka aktywność (praca fizyczna i 3-4 treningi w tygodniu)</li>
+                    <li>1,9-2,2 bardzo wysoka aktywność (zawodowi sportowcy, osoby codziennie trenujące)</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript" th:src="@{/main.js}"></script>
+
+</body>
+</html>

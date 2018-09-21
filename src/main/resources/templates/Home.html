@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--dwa linki z bootstrapa i z fontawesome z cdn-->
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link th:href="@{/styles.css}" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <div class="row">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/bmi">Kalkulator BMI<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/calorieCalculator">Kalkulator Kalorii<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <h1 class="text-center">Witaj na strone!</h1>
+</header>
+<h2 class="text-center">
+<a href="/bmi">Kalkulator BMI </a>
+    <div class="icon">
+    <i class="fas fa-heartbeat"></i>
+    </div>
+    <a href="/calorieCalculator">Kalkulator Kalorii</a>
+</h2>
+
+<div class="container">
+
+    <div class="flex">
+
+        <div class="flex-child">
+            <p class="font-weight-bold">Wskaźnik Masy Ciała:</p>
+
+            (ang. body mass index, BMI), także wskaźnik Queteleta II – współczynnik powstały przez podzielenie masy ciała podanej w kilogramach przez kwadrat wysokości podanej w metrach[2]. Klasyfikacja (zakres wartości) wskaźnika BMI została opracowana wyłącznie dla dorosłych[3] i nie może być stosowana u dzieci. Dla oceny prawidłowego rozwoju dziecka wykorzystuje się siatki centylowe, które powinny być dostosowane dla danej populacji.
+
+            Oznaczanie wskaźnika masy ciała ma znaczenie w ocenie zagrożenia chorobami związanymi z nadwagą i otyłością, np. cukrzycą, chorobą niedokrwienną serca, miażdżycą. Podwyższona wartość BMI związana jest ze zwiększonym ryzykiem wystąpienia takich chorób. </div>
+
+        <div class="flex-child">
+            <p class="font-weight-bold">Basal Metabolic Rate:</p>
+             czyli wskaźnik podstawowej przemiany materii (polski skrót PPM), nazywany również tempem metabolizmu podstawowego, wskazuje najmniejsze dzienne zapotrzebowanie kaloryczne, dzięki któremu zachowamy podstawowe funkcje życiowe. Na układ nerwowy przypada 1/4 tej wartości, na wątrobę - 1/5, 1/15 na serce i nerki, a kolejne 2/5 na pozostałe organy.</div>
+
+    </div>
+
+</div>
+
+<!--dwa linki żeby po zmniejszeniu działało meny-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript" th:src="@{/main.js}"></script>
+
+</body>
+</html>

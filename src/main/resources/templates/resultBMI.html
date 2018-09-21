@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--dwa linki z bootstrapa i z fontawesome z cdn-->
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link th:href="@{/styles.css}" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <div class="row">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/bmi">Kalkulator BMI<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/calorieCalculator">Kalkulator Kalorii<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="result">
+<div class="container">
+    <div class="row">
+        <h2>
+            <label>Podana waga: </label>
+        </h2>
+        <h2 th:text="${data.weight}" />
+    </div>
+    <div class="row">
+        <h2>
+            <label> Podany wzrost: </label>
+            <h2 th:text="${data.height}"/>
+        </h2>
+    </div>
+    <div class="row">
+        <h1>
+            <label> BMI wynosi: </label>
+            <h1 th:text="${data.getScoreBMI()}"/>
+        </h1>
+    </div>
+</div>
+</div>
+
+<div class="container">
+
+    <div class="flex">
+
+        <div class="flex-child">
+            <p class="font-weight-bold">Wskaźnik Masy Ciała:</p>
+
+            (ang. body mass index, BMI), także wskaźnik Queteleta II – współczynnik powstały przez podzielenie masy
+            ciała podanej w kilogramach przez kwadrat wysokości podanej w metrach[2]. Klasyfikacja (zakres wartości)
+            wskaźnika BMI została opracowana wyłącznie dla dorosłych[3] i nie może być stosowana u dzieci. Dla oceny
+            prawidłowego rozwoju dziecka wykorzystuje się siatki centylowe, które powinny być dostosowane dla danej
+            populacji.
+
+            Oznaczanie wskaźnika masy ciała ma znaczenie w ocenie zagrożenia chorobami związanymi z nadwagą i otyłością,
+            np. cukrzycą, chorobą niedokrwienną serca, miażdżycą. Podwyższona wartość BMI związana jest ze zwiększonym
+            ryzykiem wystąpienia takich chorób.
+        </div>
+
+        <div class="flex-child">
+            <p class="font-weight-bold">Zakresy wartości BMI</p>
+            <div class="bd-example">
+                <ul>
+                    <li>< 16,0 – wygłodzenie</li>
+                    <li>16,0–16,99 – wychudzenie (spowodowane często przez anoreksję lub inną ciężką chorobę)</li>
+                    <li>17,0–18,49 – niedowagę</li>
+                    <li>18,5–24,99 – wartość prawidłową</li>
+                    <li>25,0–29,99 – nadwagę</li>
+                    <li>30,0–34,99 – I stopień otyłości</li>
+                    <li>35,0–39,99 – II stopień otyłości (otyłość kliniczna)</li>
+                    <li>≥ 40,0 – III stopień otyłości (otyłość skrajna)</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript" th:src="@{/main.js}"></script>
+
+
+</body>
+</html>
