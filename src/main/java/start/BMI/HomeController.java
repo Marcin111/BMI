@@ -39,36 +39,6 @@ public class HomeController {
         return "resultBMI";
     }
 
-//    @GetMapping("/score")
-//    public String add(@RequestParam double weight,
-//                      @RequestParam double height,
-//                      @RequestParam int age,
-//                      @RequestParam double param,
-//                      @RequestParam String sex,
-//                      ModelMap map) {
-//        Data data = new Data(sex,weight,height,age);
-//        data.setWeight(weight);
-//        data.setHeight(height);
-//        data.setAge(age);
-//        data.setParam(param);
-//        data.setSex(sex);
-//
-//        double valueW = Math.round(data.woman(weight, height, age));
-//        valueW /= 100;
-//        double valueM = Math.round(data.man(weight, height, age));
-//        valueM /= 100;
-//
-//
-//        if (sex.equals("Kobieta")) {
-//            map.put("data", valueW);
-//        } else if (sex.equals("Mężczyzna")) {
-//            map.put("data", valueM);
-//        }
-//
-//        map.put("data", data);
-//        return "score";
-//    }
-
     @GetMapping("/resultCalorieCalculator")
     public String resultCalorieCalculator(@RequestParam double weight,
                                           @RequestParam double height,
@@ -112,14 +82,4 @@ public class HomeController {
         }
         return "resultCalorieCalculator";
     }
-
-//    @ModelAttribute("activityLvl")
-//    public Map<String, String> getActivityLvl() {
-//        Map<String, String> activityLvl = new HashMap<String, String>();
-//        activityLvl.put("1", "Brak aktywności fizycznej");
-//        activityLvl.put("2", "Średnia aktyność fizyczna (ćwiczenia 3-5 tygodniowo)");
-//        activityLvl.put("3", "Duża aktywność fizyczna (ćwiczenia codziennie)");
-//        activityLvl.put("4", "Bardzo duża aktywność fizyczna");
-//        return activityLvl;
-//    }
 }

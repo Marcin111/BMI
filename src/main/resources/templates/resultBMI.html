@@ -45,26 +45,26 @@
     </div>
 </nav>
 <div class="result">
-<div class="container">
-    <div class="row">
-        <h2>
-            <label>Podana waga: </label>
-        </h2>
-        <h2 th:text="${data.weight}" />
+    <div class="container">
+        <div class="row">
+            <h2>
+                <label>Podana waga: </label>
+            </h2>
+            <h2 th:text="${data.weight}"/>
+        </div>
+        <div class="row">
+            <h2>
+                <label> Podany wzrost: </label>
+                <h2 th:text="${data.height}"/>
+            </h2>
+        </div>
+        <div class="row">
+            <h1>
+                <label> BMI wynosi: </label>
+                <h1 th:text="${data.getScoreBMI()}"/>
+            </h1>
+        </div>
     </div>
-    <div class="row">
-        <h2>
-            <label> Podany wzrost: </label>
-            <h2 th:text="${data.height}"/>
-        </h2>
-    </div>
-    <div class="row">
-        <h1>
-            <label> BMI wynosi: </label>
-            <h1 th:text="${data.getScoreBMI()}"/>
-        </h1>
-    </div>
-</div>
 </div>
 
 <div class="container">

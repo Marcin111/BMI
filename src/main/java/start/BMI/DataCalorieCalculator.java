@@ -9,7 +9,6 @@ public class DataCalorieCalculator {
     private String sex;
 
     public DataCalorieCalculator(String sex, double weight, double height, int age, int param) {
-        //String sex, double weight, double height, int age
     }
 
     public double getWeight() {
@@ -70,15 +69,4 @@ public class DataCalorieCalculator {
 
         return result;
     }
-
-//    public double getBMR(String sex, double weight, double height, int age) {
-//        double resultBMR;
-//        if (sex.equals("Kobieta")) {
-//            resultBMR = (655 + (9.6 * weight) + (1.8 * height) - (4.7 * age)) * 100;
-//        } else if (sex.equals("Mężczyzna")) {
-//            resultBMR = (66 + (13.7 * weight) + (5 * height) - (6.76 * age)) * 100;
-//        }
-//        return resultBMR;
-//    }
-
 }
